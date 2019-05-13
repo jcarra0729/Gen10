@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+    <title>Lucky Sevens</title>
+    <script type="text/javascript">
+
+        function playLuckySevens() {
+            var purse;
+            var startingBet;
+            var firstDie;
+            var secondDie;
+            var diceSum;
+            var rolls = 0;
+            var maxWinnings = 0;
+            var rollsAtMax = 0;
+
+            purse = prompt("How much would you like to bet?");
+            if (purse > 0) {
+                startingBet = purse;
+                        while (purse > 0){
+                        firstDie = rollDice();
+                        secondDie = rollDice();
+                        diceSum = firstDie + secondDie;
+                        rolls++;
+                            if (diceSum != 7)
+                            {purse --;
+                            console.log("Loss");}
+                            else {
+                                purse += 4;
+                                    if(purse > maxWinnings) {
+                                    maxWinnings += (purse-maxWinnings)
+                                    rollsAtMax = rolls;}
+                                console.log("Win!");
+                                    }
+                                }
+                        console.log('Game Over')
+                        var x = document.getElementById("myTable");
+                        var row = tbl.insertRow();
+                        var row = tbl.insertRow();
+                        var row = tbl.insertRow();
+                        var row = tbl.insertRow();
+                        var cell1 =row.insertCell();
+                        var cell2 =row.insertCell();
+                        var cell3 =row.insertCell();
+                        var cell4 =row.insertCell(); 
+
+                            }
+
+
+            else {
+                alert("Error. Please insert more money.");
+
+
+            }
+        }
+
+        function rollDice() {
+            return Math.floor(Math.random() * 6) + 1;
+            }
+ 
+            for (var i = 0; i < 1; i++) {
+            console.log(rollDice())
+            }
+    </script>
+</head>
+
+<body onload="playLuckySevens();">
+    <header>
+        <h1 style='text-align:center;'>Lucky Sevens</h1>
+    </header>
+
+    <br />
+    
+    <div style="text-align: center;">
+        Starting Bet: <input type="text" id="startingBet" placeholder="Must be greater than 0."/>
+            <br /><br />
+
+     </div>
+    
+
+    
+</body>
+
+</html>

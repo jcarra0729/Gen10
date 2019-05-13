@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+Jon Carrasquillo
+Date Created: 5/4/19
+Most recent revision: 5/4/19 5PM
+-->
+
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Contact Us</title>
+
+    <script type='text/javascript'>  
+            function validateform(){  
+            var name=document.myform.name.value;  
+            var password=document.myform.password.value;  
+              
+            if (name==null || name==""){  
+              alert("Name can't be blank");  
+              return false;   
+              }  
+            }  
+    </script> 
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='restaurantStyles.css' rel='stylesheet' type='text/css' />
+    <style>
+        body {
+            background-color: lightgray;
+            color: darkblue;
+        }
+        label[for=name], label[for=phone]{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <h1 style='text-align:center;'>Steve's Bagel Emporium</h1>
+    </header>
+
+<nav class='border'>
+        <nav class='border'>
+                <hr style="width: 50%; border: 2px solid black;" />
+            
+                <p><a href="index.html">
+                    <span class="glyphicon glyphicon-home">&emsp;
+                    <a class='btn badge-pill' href="menu.html">Menu</a> &emsp;
+                    <a class='btn badge-pill' href="contact.html">Contact Us</a>
+                </p>
+                <hr />
+            </nav>
+<br />
+
+
+<form>
+    <div class="container">
+    <div class="form-group" align='center'>
+        <label for='name'>Name:</label>
+        <input type='text' id='name' name='name' required> <br /><br />
+
+        <label for='email'>Email:</label>
+        <input type='text' id='email' name='email'><br /><br />
+
+        <label for='phone'>Phone:</label>
+        <input type='text' id='phone' name='phone' required><br /><br />
+
+        <label for='inquiry'>Reason for Inquiry:</label>
+        <select id='inquiry' name='inquiry'>
+            <option value='default' selected>Catering(default)</option>
+            <option value='privateparty'>Private Party</option>
+            <option value='feedback'>Feedback</option>
+            <option value='other'>Other</option>
+        </select>
+        <br /><br />
+
+        <label for='info'>Additional Information:</label>
+        <textarea id='info' name='info'></textarea><br /><br />
+
+        <label for='questionnaire'>Have you been to the restaurant?</label>
+        <input type='radio' id='choice1' name='questionnaire' value='No'>
+        <label for='choice1'>No</label>
+        <input type='radio' id='choice2' name='questionnaire' value='Yes'>
+        <label for='choice2'>Yes</label><br /><br />
+
+        <label for='contact'>Best Days to Contact You:</label>&emsp;
+        <input type='checkbox' id='monday' name='contact' value='monday'>
+        <label for='monday'>M</label>&emsp;
+        <input type='checkbox' id='tuesday' name='contact' value='tuesday'>
+        <label for='tuesday'>T</label>&emsp;
+        <input type='checkbox' id='wednesday' name='contact' value='wednesday'>
+        <label for='wednesday'>W</label>&emsp;
+        <input type='checkbox' id='thursday' name='contact' value='thursday'>
+        <label for='thursday'>Th</label>&emsp;
+        <input type='checkbox' id='friday' name='contact' value='friday'>
+        <label for='friday'>F</label><br /><br />
+
+        <input type='submit' name='submit' value='Send Request'>
+        </div>
+        </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<hr />
+
+
+
+
+<div id="footer">
+        <div class="container">
+       <p style='text-align:center;'>2424 W. Chinchilla Road Minneapolis, MN 55402</p>
+       <p style='text-align:center;'>612-648-7398</p>
+       </div>
+       </div>
+
+</body>
